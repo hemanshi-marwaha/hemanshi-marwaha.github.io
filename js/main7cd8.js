@@ -520,4 +520,51 @@ document.addEventListener('DOMContentLoaded', function () {
     type();
   });
 
+// Get the elements
+const viewProjectBtn = document.getElementById('viewProjectBtn');
+const popupWindow = document.getElementById('popupWindow');
+const popupClose = document.querySelector('.popup-close');
 
+// Open the popup when the button is clicked
+viewProjectBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  popupWindow.style.display = 'flex'; // Display the popup
+});
+
+// Close the popup when the close button is clicked
+popupClose.addEventListener('click', function() {
+  popupWindow.style.display = 'none'; // Hide the popup
+});
+
+// Close the popup when clicking outside the popup content
+window.addEventListener('click', function(event) {
+  if (event.target === popupWindow) {
+    popupWindow.style.display = 'none';
+  }
+});
+
+
+
+var currentImageIndex = 0;
+var images = [
+  "img/a2.png",
+  "img/a4.png",
+  "img/a6.png"
+];
+
+function openImageViewer(index) {
+  currentImageIndex = index;
+  document.getElementById("imageViewerImg").src = images[index];
+  document.getElementById("imageViewer").style.display = "flex";
+}
+
+function closeImageViewer() {
+  document.getElementById("imageViewer").style.display = "none";
+}
+
+function changeImage(direction) {
+  currentImageIndex += direction;
+  if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+  if (currentImageIndex >= images.length) currentImageIndex = 0;
+  document.getElementById("imageViewerImg").src = images[currentImageIndex];
+}
