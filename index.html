@@ -7,6 +7,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <link rel="stylesheet" href="css/style95b0.css?0004"/>
 	  <link href="img\logoW1.png" rel="icon">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
    </head>
    <body>
       <div class="ScrollWrapper">
@@ -60,7 +62,8 @@
                               <div class="l"></div>
                            </h3>
                            <p class="k">Vessel counts and CO2 emissions: trends, distributions and changes over time.</p>
-                           <div class="n"><a class="o" href="https://github.com/hemanshi-marwaha/Marine-Analysis">View Project</a>
+                           <div class="n">
+						   <a class="o" id="viewProjectBtn" href="#">View Project</a>
 						   <!-- <a class="o" href="http://tympanus.net/codrops/rain-water-effect-experiments/">Read the article</a> -->
 						   </div>
                         </div>
@@ -126,6 +129,85 @@
                      <!-- - var title='Garden Estúdio'--><!-- - var subtitle='Illustration'--><!-- - var description='SVG animation for a playful download button.'--><!-- - var image='img/elastic.png'--><!-- - var video='elastic'--><!-- ---><!-- var links=[--><!-- {label:'View demo',link:'http://tympanus.net/Development/ElasticProgress/'},--><!-- {label:'Read the article',link:"http://tympanus.net/codrops/elastic-progress/"}--><!-- ]--><!-- include work-->
                   </div>
                </section>
+			   
+			   
+			<div id="popupWindow" class="popup-overlay">
+  <div class="popup-content">
+    <span class="popup-close">&times;</span>
+    
+    <!-- Project Title -->
+    <h3>Marine Analysis</h3>
+
+   <!-- Tools Used -->
+<h6>Tools used in this project:</h6>
+<img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Icon" style="width: 30px; vertical-align: middle; margin-right: 10px;">
+<img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel Icon" style="width: 30px; vertical-align: middle;">
+   <br>
+	
+	<p class="report-link">Link to the report <a href="https://github.com/hemanshi-marwaha/Marine-Analysis/blob/main/Report.pdf">here</a></p>
+    <h5>About this project</h5>
+    
+
+    <h4>Project Overview</h4>
+    <p>This project aims to analyze the environmental impact of global shipping by examining vessel counts and CO2 emissions data for three consecutive years: 2022, 2023, and 2024. The data covers 271,238 rows, offering a robust foundation for identifying patterns, trends, and outliers related to maritime activity and emissions across various regions. By uncovering these insights, the project seeks to inform both environmental policy and business decisions in the shipping industry.</p>
+
+    <h4>Objective</h4>
+    <p>The primary goal of the analysis is to understand how global vessel traffic correlates with CO2 emissions over time. Specifically, the project focuses on:</p>
+    <ul>
+      <li>Tracking the year-over-year changes in emissions.</li>
+      <li>Identifying geographical hotspots where emissions are concentrated.</li>
+      <li>Determining the relationship between the number of vessels and emissions.</li>
+      <li>Exploring trends that could indicate whether current emission control policies are effective.</li>
+    </ul>
+
+		<h4>Methodology</h4>
+	<p>To achieve these objectives, the project follows a systematic approach using various data analysis techniques:</p>
+	<ol>
+	  <li><strong>Descriptive Statistics:</strong> This initial step provides a high-level summary of the data, including averages, ranges, and distribution patterns of both vessel counts and CO2 emissions.</li>
+	  <li><strong>Geospatial Analysis:</strong> By mapping vessel counts and CO2 emissions geographically, the project reveals regions with high levels of shipping activity and emissions.</li>
+	  <li><strong>Correlation Analysis:</strong> The project examines the relationship between the number of vessels and emissions over the three years.</li>
+	  <li><strong>Year-over-Year Change:</strong> A critical part of the analysis involves comparing the changes in both vessel counts and emissions from one year to the next.</li>
+	  <li><strong>Outlier Detection:</strong> Outliers in emissions are detected, particularly in regions where there is an unexpected spike or drop in CO2 emissions.</li>
+	</ol>
+
+    <h4>Key Findings</h4>
+	<ul>
+    <li><strong>Steady Growth in Vessel Traffic:</strong> Over the three years, there has been a consistent increase in vessel activity, particularly in 2024.</li>
+    <li><strong>Emissions Control Success in 2023:</strong> While 2023 showed some promising signs of emission stabilization, these gains were offset by a surge in emissions in 2024.</li>
+    <li><strong>Regional Disparities:</strong> Emissions are not evenly distributed. Certain regions, such as major industrial ports, continue to experience disproportionately high levels of CO2 emissions.</li>
+	</ul>
+
+
+    <h4>Conclusion</h4>
+    <p>The analysis highlights the global challenge of balancing economic growth with environmental sustainability in the shipping industry. While some progress was made in stabilizing emissions in 2023, the surge in 2024 suggests that more aggressive and sustained efforts are needed to reduce the maritime sector's carbon footprint.</p>
+
+    <p class="report-link">Link to Dataset <a href="https://github.com/hemanshi-marwaha/Marine-Analysis/blob/main/MyDataset.xlsx">here</a></p>
+
+    <h4>Project Images</h4>
+
+    <!-- Image Thumbnails Section -->
+    <div class="thumbnail-section">
+      <img class="thumbnail" src="img/a1.png" alt="Thumbnail 1" onclick="openImageViewer(0)">
+      <img class="thumbnail" src="img/a3.png" alt="Thumbnail 2" onclick="openImageViewer(1)">
+      <img class="thumbnail" src="img/a5.png" alt="Thumbnail 3" onclick="openImageViewer(2)">
+    </div>
+
+    <!-- Button to GitHub -->
+    <button class="github-button" onclick="window.open('https://github.com/hemanshi-marwaha/Marine-Analysis', '_blank')">Go to Project on GitHub</button>
+  </div>
+</div>
+
+<!-- Image Viewer Popup -->
+<div id="imageViewer" class="image-viewer-overlay">
+  <span class="image-viewer-close" onclick="closeImageViewer()">&times;</span>
+  <img id="imageViewerImg" src="" alt="Large View">
+  <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+  <span class="next" onclick="changeImage(1)">&#10095;</span>
+</div>
+			   
+			   
+			   
+			   
                <footer>
                   <h2 id="contact">Contact</h2>
                   <div class="u">
